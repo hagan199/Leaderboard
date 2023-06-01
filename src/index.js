@@ -1,23 +1,19 @@
 import './styles/main.css';
-import { displayScores, getNewScore, deleteScore, refreshScores } from './modules/ui.js';
+import UI from './modules/ui.js';
 
-document.addEventListener('DOMContentLoaded', displayScores);
+document.addEventListener('DOMContentLoaded', UI.displayScores);
 
-document.querySelector('#add-form').addEventListener('submit', handleFormSubmit);
-document.querySelector('#refresh').addEventListener('click', handleRefresh);
-
-function handleFormSubmit(e) {
+document.querySelector('#add-form').addEventListener('submit', (e) => {
+  // prevent default submit
   e.preventDefault();
 
-  const playerName = document.querySelector('#name').value;
-  const playerScore = document.querySelector('#score').value;
+  const name = document.querySelector('#name').value;
+  const score = document.querySelector('#score').value;
 
-  getNewScore(playerName, playerScore);
-  deleteScore('Emmanuel hagan', 42);
-  deleteScore('Light', 67);
-  deleteScore('All', 20);
-}
+  UI.getNewScore(name, score);
+  UI.deleteScore('John Doe', 42);
+  UI.deleteScore('farzad', 67);
+  UI.deleteScore('amir', 20);
+});
 
-function handleRefresh() {
-  refreshScores();
-}
+document.querySelector('#refresh').addEventListener('click', UI.refreshScores);
