@@ -78,11 +78,6 @@ h3 {
   width: 100%;
 }
 
-form input {
-  display: block;
-  margin-bottom: 10px;
-}
-
 .add-score ul {
   padding: 0;
   width: 100%;
@@ -96,8 +91,8 @@ form input {
 }
 
 form input {
-  display: flex;
-  width: 100%;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .joke {
