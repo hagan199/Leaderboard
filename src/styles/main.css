@@ -93,6 +93,7 @@ h3 {
 form input {
   display: block;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .joke {
